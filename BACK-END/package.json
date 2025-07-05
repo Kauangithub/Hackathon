@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^6.11.1",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "mongodb": "^6.17.0",
     "mysql2-promise": "^0.1.4"
   }
 }
