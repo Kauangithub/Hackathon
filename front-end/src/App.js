@@ -4,9 +4,34 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Outlet, Link } from "react-router-dom";
 
 function App() {
-  return (
-    <a>AAAA</a>
-  );
+ return (
+   <BrowserRouter>
+     <Routes>
+       <Route path="/" element={<Layout />}>
+         <Route index element={<Home />} />
+         <Route path="cadastro" element={<Cadastrar />} />
+       </Route>
+     </Routes>
+   </BrowserRouter>
+ );
+}
+
+const Layout = () => {
+  return(
+    <h1>A</h1>
+  )
+}
+
+const Home = () => {
+  return(
+    <h3>A</h3>
+  )
+}
+
+const Cadastrar = () => {
+  return(
+    <h3>AAA</h3>
+  )
 }
 
 export default App;
