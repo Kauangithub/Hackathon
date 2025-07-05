@@ -4,9 +4,13 @@
   "description": "Back-end do projeto destinado ao HACKATHON 2025",
   "main": "index.js",
   "scripts": {
-    "dev": "index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
 }
