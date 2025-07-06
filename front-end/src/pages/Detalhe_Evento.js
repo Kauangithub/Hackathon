@@ -1,13 +1,16 @@
 import Card_Event from "../components/Card_Event"
+import { Link } from "react-router-dom";
 
 function Detalhe_Evento() {
   return (
     <>
       <section>
         <div class="horizontal title">
-          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.75 15H6.25M6.25 15L15 23.75M6.25 15L15 6.25" stroke="#006C8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <Link to='/'>
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.75 15H6.25M6.25 15L15 23.75M6.25 15L15 6.25" stroke="#006C8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </Link>
           <h3>Detalhes do evento</h3>
         </div>
         
@@ -61,22 +64,25 @@ function Detalhe_Evento() {
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1292.2702093867304!2d-45.42626270861244!3d-23.636872036261888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cd631551d2d585%3A0xbe6efd4b81fb3cd0!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%2C%20Ci%C3%AAncia%20e%20Tecnologia%20de%20S%C3%A3o%20Paulo%20-%20IFSP%20C%C3%A2mpus%20Caraguatatuba!5e0!3m2!1spt-BR!2sbr!4v1751839554432!5m2!1spt-BR!2sbr" width="400" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="border"></iframe>
 
           <button className="horizontal border">
-            <img className='MapPing_Icon'></img>
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 27.5C14.7083 27.5 14.4583 27.4167 14.25 27.25C14.0417 27.0833 13.8854 26.8646 13.7813 26.5937C13.3854 25.4271 12.8854 24.3333 12.2812 23.3125C11.6979 22.2917 10.875 21.0937 9.8125 19.7187C8.75 18.3437 7.88542 17.0312 7.21875 15.7812C6.57292 14.5312 6.25 13.0208 6.25 11.25C6.25 8.8125 7.09375 6.75 8.78125 5.0625C10.4896 3.35417 12.5625 2.5 15 2.5C17.4375 2.5 19.5 3.35417 21.1875 5.0625C22.8958 6.75 23.75 8.8125 23.75 11.25C23.75 13.1458 23.3854 14.7292 22.6563 16C21.9479 17.25 21.125 18.4896 20.1875 19.7187C19.0625 21.2187 18.2083 22.4687 17.625 23.4687C17.0625 24.4479 16.5938 25.4896 16.2188 26.5937C16.1146 26.8854 15.9479 27.1146 15.7188 27.2813C15.5104 27.4271 15.2708 27.5 15 27.5ZM15 14.375C15.875 14.375 16.6146 14.0729 17.2187 13.4687C17.8229 12.8646 18.125 12.125 18.125 11.25C18.125 10.375 17.8229 9.63542 17.2187 9.03125C16.6146 8.42708 15.875 8.125 15 8.125C14.125 8.125 13.3854 8.42708 12.7813 9.03125C12.1771 9.63542 11.875 10.375 11.875 11.25C11.875 12.125 12.1771 12.8646 12.7813 13.4687C13.3854 14.0729 14.125 14.375 15 14.375Z" fill="white" />
+            </svg>
+
             <h3>Abrir no Google Maps</h3>
           </button>
         </div>
 
         <div className="bloco">
           
-          <div> 
-            <img className='Icon'></img>
-            <div className="horizontal">
-              <h5>Organizado por</h5>
-              <p>Letícia de Deus</p>
-            </div>
+          <div className="horizontal title">
+            <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.8334 22.375V20.2917C20.8334 19.1866 20.3944 18.1268 19.613 17.3454C18.8316 16.564 17.7718 16.125 16.6667 16.125H8.33335C7.22828 16.125 6.16848 16.564 5.38708 17.3454C4.60567 18.1268 4.16669 19.1866 4.16669 20.2917V22.375M16.6667 7.79167C16.6667 10.0929 14.8012 11.9583 12.5 11.9583C10.1988 11.9583 8.33335 10.0929 8.33335 7.79167C8.33335 5.49048 10.1988 3.625 12.5 3.625C14.8012 3.625 16.6667 5.49048 16.6667 7.79167Z" stroke="#006C8A" stroke-opacity="1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h5>Organizado por</h5>
+            <p>Letícia de Deus</p>
           </div>
 
-          <div class="horizontal">
+          <div className="botoes horizontal" id="organizador">
             <button className="horizontal border">
                 <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_70_433)">
@@ -105,17 +111,14 @@ function Detalhe_Evento() {
               </svg>
 
             </div>
-
-
           </div>
-
-        </div>
-
-        <h2>Outros eventos</h2>
-        <div>
-        
         </div>
       </section>
+      <hr/>
+      <h2>Outros eventos</h2>
+      <div>
+      
+      </div>
     </>
   )
 }
