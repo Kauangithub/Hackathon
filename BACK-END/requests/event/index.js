@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 import { app } from "../../index.js"
-function ReqEvent() {   
+function ReqEvent() {  
     app.post('/eventos', async (req, res) => {
 
         await prisma.event.create({
@@ -12,7 +12,6 @@ function ReqEvent() {
                 desc: req.body.desc,
                 dateend: req.body.dateend,
                 datestart: req.body.datestart,
-                status: ACCEPT
                 // status tá accept para desenvolvimento
             }
         }) 
@@ -31,14 +30,13 @@ function ReqEvent() {
                         title: req.query.title,
                         datestart: req.query.datestart,
                         dateend: req.query.dateend,
-                        status: ACCEPT
                     }
                 })
             } else {
-                users = await prisma.user.findMany()
+                events = await prisma.event.findMany()
             };
     
-            res.status(200).json(users)
+            res.status(200).json(events)
         })
 
 }

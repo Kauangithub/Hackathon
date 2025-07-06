@@ -20,23 +20,23 @@ model User {
   age      String?
   role     Role       @default(USER)
   Provider Provider[]
-  senha 
+  senha    String
 }
 
 model Provider {
-  id            String  @id @default(auto()) @map("_id") @db.ObjectId
-  user          User    @relation(fields: [userId], references: [id])
-  userId        String  @db.ObjectId
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  user          User     @relation(fields: [userId], references: [id])
+  userId        String   @db.ObjectId
   cpfCnpj       String
   enterprise    String
-  verified      Boolean @default(false)
+  verified      Boolean  @default(false)
   branch        Branch[]
-  writtenEvents Event[] @relation("WrittenEvents")
+  writtenEvents Event[]  @relation("WrittenEvents")
 }
 
 model Event {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  status Status @default(ANALYSYS)
+  status    Status   @default(ANALYSYS)
   createdAt DateTime @default(now())
   title     String
   desc      String
@@ -52,11 +52,13 @@ enum Role {
   PROVIDER
   ADMIN
 }
+
 enum Status {
   ANALYSYS
   REVISION
   ACCEPT
 }
+
 enum Branch {
   Show
   Culinaria
