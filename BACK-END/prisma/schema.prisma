@@ -28,7 +28,7 @@ model Provider {
   userId        String  @db.ObjectId
   cpfCnpj       String
   enterprise    String
-  branch        String
+  branch        Branch
   writtenEvents Event[] @relation("WrittenEvents")
 }
 
@@ -48,4 +48,15 @@ enum Role {
   USER
   PROVIDER
   ADMIN
+}
+
+enum Branch {
+  Show
+  Culinaria
+  Cultura
+  Passeio
+  Lazer
+  Trilhas
+  Arte
+  Compras
 }
