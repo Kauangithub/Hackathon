@@ -34,8 +34,20 @@ const Layout = () => {
   return(
     <>
       <div>
-        <Outlet />
+        <div>
+          <img className='HomeIcon'></img>
+          <p>Início</p>
+        </div>
+        <div>
+          <img className='BuscarIcon'></img>
+          <p>Buscar</p>
+        </div>
+        <div>
+          <img className='ContaIcon'></img>
+          <p>Conta</p>
+        </div>
       </div>
+      <Outlet />
     </>
   )
 }
