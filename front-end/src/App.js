@@ -10,6 +10,8 @@ function App() {
        <Route path="/" element={<Layout />}>
          <Route index element={<Home />} />
          <Route path="cadastro" element={<Cadastrar />} />
+         <Route path="detalheevento" element={<DetalheEvento />} />
+         <Route path="perfil" element={<Perfil />} />
        </Route>
      </Routes>
    </BrowserRouter>
