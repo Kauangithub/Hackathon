@@ -20,7 +20,7 @@ model User {
   age      String?
   role     Role      @default(USER)
   Provider Provider?
-  senha    String
+  senha    String?
 }
 
 model Provider {

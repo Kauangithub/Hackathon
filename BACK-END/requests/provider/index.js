@@ -71,7 +71,6 @@ function ReqProvider() {
         res.status(201).json({ message: 'Usuario deletado com sucesso'})
     })
 
-    app.listen(3000) 
 }
 
 export { ReqProvider};
