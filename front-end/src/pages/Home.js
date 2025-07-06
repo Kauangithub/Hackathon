@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /* Imagens: */
 import Logo from '../img/Logo.png';
 
@@ -19,11 +21,13 @@ function Home() {
           </div>
           <div className="botoes horizontal">
 
-            <div className="botao border" id="adicionar">
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 6.25V23.75M6.25 15H23.75" stroke="#006C8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
+            <Link to='/cadastro_evento'>
+              <div className="botao border" id="adicionar">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 6.25V23.75M6.25 15H23.75" stroke="#006C8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </Link>
 
             <div className="botao border" id="calendario">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">

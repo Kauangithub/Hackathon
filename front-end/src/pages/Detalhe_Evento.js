@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Card_Event from "../components/Card_Event"
 
 function Detalhe_Evento() {
@@ -5,9 +7,11 @@ function Detalhe_Evento() {
     <>
       <section>
         <div class="horizontal title">
-          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.75 15H6.25M6.25 15L15 23.75M6.25 15L15 6.25" stroke="#006C8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <Link to='/'>
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.75 15H6.25M6.25 15L15 23.75M6.25 15L15 6.25" stroke="#006C8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </Link>
           <h3>Detalhes do evento</h3>
         </div>
         
