@@ -42,10 +42,16 @@ function ReqProvider() {
                     }
                 },
             }
-        }) 
-
-        res.status(201).json(req.body)
-
+        })
+        res.status(201).json(req.body) 
+        await prisma.user.update({
+            where: {
+                email: req.query.email
+            },
+            data: {
+                role: 'PROVIDER',
+            }});
+        
     })
 
     app.put('/prestadores/:id', async (req, res) => {
@@ -55,9 +61,9 @@ function ReqProvider() {
                 id: req.params.id
             },
             data: {
-                email: req.body.email,
-                name: req.body.name,
-                age: req.body.age,
+                cpfCnpj: req.body.cpfCnpj,
+                enterprise: req.body.enterprise,
+                branch: req.body.branch,
             }
         }) 
 
