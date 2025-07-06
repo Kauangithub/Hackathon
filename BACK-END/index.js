@@ -1,7 +1,8 @@
 import express from 'express'
 import cors from 'cors'
 
-import { ReqUser } from './requests/user/index.js'
+import { ReqUser } from './requests/user/index.js';
+import { ReqEvent } from './requests/event/index.js';
 
 const app = express();
 app.use(express.urlencoded({ extend: true}));
@@ -16,5 +17,6 @@ app.listen(PORT, () =>
 );
 
 ReqUser();
+ReqEvent();
 
 export {app};
