@@ -25,7 +25,7 @@ model User {
 
 model Provider {
   id            String   @id @default(auto()) @map("_id") @db.ObjectId
-  user          User     @relation(fields: [userId], references: [id])
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId        String   @unique @db.ObjectId
   cpfCnpj       String   @unique
   enterprise    String
@@ -39,12 +39,12 @@ model Event {
   status    Status   @default(ANALYSYS)
   createdAt DateTime @default(now())
   title     String
-  local     String
+  local     String?
   desc      String
   dateStart DateTime
   dateEnd   DateTime
   published Boolean  @default(false)
-  author    Provider @relation("WrittenEvents", fields: [authorId], references: [id])
+  author    Provider @relation("WrittenEvents", fields: [authorId], references: [id], onDelete : Cascade)
   authorId  String   @db.ObjectId
 }
 
