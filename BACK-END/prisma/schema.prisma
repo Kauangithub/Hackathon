@@ -20,6 +20,7 @@ model User {
   age      String?
   role     Role       @default(USER)
   Provider Provider[]
+  senha 
 }
 
 model Provider {
@@ -29,16 +30,19 @@ model Provider {
   cpfCnpj       String
   enterprise    String
   branch        String
+  verified      Boolean @default(false)
+  branch        Branch[]
   writtenEvents Event[] @relation("WrittenEvents")
 }
 
 model Event {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  status Status @default(ANALYSYS)
   createdAt DateTime @default(now())
   title     String
   desc      String
-  date      DateTime
-  verified  Boolean  @default(false)
+  dateStart DateTime
+  dateEnd   DateTime
   published Boolean  @default(false)
   author    Provider @relation("WrittenEvents", fields: [authorId], references: [id])
   authorId  String   @db.ObjectId
@@ -48,4 +52,19 @@ enum Role {
   USER
   PROVIDER
   ADMIN
+}
+enum Status {
+  ANALYSYS
+  REVISION
+  ACCEPT
+}
+enum Branch {
+  Show
+  Culinaria
+  Cultura
+  Passeio
+  Lazer
+  Trilhas
+  Arte
+  Compras
 }
