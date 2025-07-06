@@ -12,6 +12,7 @@ import Cadastro_Evento from './pages/Cadastro_Evento';
 import Detalhe_Evento from './pages/Detalhe_Evento';
 import Conta from './pages/Conta';
 import TipoConta from './pages/TipoConta';
+import Cadastro_Usuario1 from './pages/Cadastro_Usuario1';
 
 /* Rotas */
 function App() {
@@ -23,7 +24,9 @@ function App() {
           <Route path="cadastro_evento" element={<Cadastro_Evento />} />
           <Route path="detalhe_evento" element={<Detalhe_Evento />} />
           <Route path="perfil" element={<Conta />} />
-          <Route path="" element={<Conta />} />
+          <Route path="tipo_conta" element={<TipoConta />} />
+          <Route path="cadastro_usuario/1" element={<Cadastro_Usuario1 />} />
+          <Route path="cadastro_usuario/2" element={<Cadastro_Usuario2 />} />
         </Route>
       </Routes>
     </BrowserRouter>
