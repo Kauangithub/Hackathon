@@ -42,17 +42,28 @@ header{
 
   .botoes{
     gap: 10px;
-
-    .botao{
-      background-color: var(--color3);
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   }
 }
+
+Link{
+  text-decoration: none;
+}
+
+.botao{
+  background-color: var(--color3);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h5{
+  color: var(--color1);
+  font-weight: 800;
+  font-size: 16px;
+}
+
 
 button{
   align-items: center;
@@ -108,6 +119,12 @@ section{
     flex-direction: row;
 }
 
+.title{
+  gap: 10px;
+  align-items: center;
+}
+
+
 .justify{
   justify-content: space-between;
   align-items: center;
@@ -130,12 +147,6 @@ section{
     .title{
       gap: 10px;
       align-items: center;
-    }
-
-    h5{
-      color: var(--color1);
-      font-weight: 800;
-      font-size: 16px;
     }
 
     input{
@@ -253,4 +264,21 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.ImgEvento{
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+}
+
+.data-destaque{
+  background-color: var(--color1);
+  color: #FFF;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+iframe{
+  width: 100%;
 }
