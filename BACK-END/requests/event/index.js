@@ -10,8 +10,9 @@ function ReqEvent() {
             data: {
                 title: req.body.title,
                 desc: req.body.desc,
-                dateend: req.body.dateend,
-                datestart: req.body.datestart,
+                dateStart: req.body.dateStart,
+                dateEnd: req.body.dateEnd,
+                author: req.body.author,
                 // status tá accept para desenvolvimento
             }
         }) 
@@ -28,8 +29,8 @@ function ReqEvent() {
                 events = await prisma.event.findMany({
                     where: {
                         title: req.query.title,
-                        datestart: req.query.datestart,
-                        dateend: req.query.dateend,
+                        dateStart: req.query.dateStart,
+                        dateEnd: req.query.dateEnd,
                     }
                 })
             } else {
