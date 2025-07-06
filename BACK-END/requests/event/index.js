@@ -12,7 +12,11 @@ function ReqEvent() {
                 desc: req.body.desc,
                 dateStart: req.body.dateStart,
                 dateEnd: req.body.dateEnd,
-                author: req.body.author,
+                author: {
+                    connect: {
+                        id: req.query.id
+                    }
+                },
             }
         }) 
 
