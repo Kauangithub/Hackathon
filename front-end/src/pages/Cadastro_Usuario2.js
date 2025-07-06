@@ -3,14 +3,17 @@ function Cadastro_Usuario2() {
     return(
         <>
             <div>
-                <h3>Criar conta de explorador e organizador</h3>
+                <h3>Crie uma senha</h3>
                 <div className='bloco'>
                     <img></img>
-                    <input type='text' placeholder='Nome completo'></input>
+                    <input type='text' placeholder='Crie uma senha'></input>
+                    <img></img>
                 </div> 
+                <p>A senha deve ter no mínimo 9 caracteres</p>
                 <div className='bloco'>
                     <img></img>
-                    <input type='text' placeholder='Seu e-mail'></input>
+                    <input type='text' placeholder='Confirme a senha'></input>
+                    <img></img>
                 </div>
                 <button type='submit' className='border horizontal'><p>Continuar</p></button>
                 <div>
@@ -24,18 +27,21 @@ function Cadastro_Usuario2() {
      return(
         <>
             <div>
-                <h3>Criar conta de explorador</h3>
+                <h3>Crie uma senha</h3>
                 <div className='bloco'>
                     <img></img>
-                    <input type='text' placeholder='Nome completo'></input>
+                    <input type='text' placeholder='Crie uma senha'></input>
+                    <img></img>
                 </div> 
+                <p>A senha deve ter no mínimo 9 caracteres</p>
                 <div className='bloco'>
                     <img></img>
-                    <input type='text' placeholder='Seu e-mail'></input>
+                    <input type='text' placeholder='Confirme a senha'></input>
+                    <img></img>
                 </div>
                 <button type='submit' className='border horizontal'><p>Continuar</p></button>
                 <div>
-
+                    
                 </div>
             </div>
         </>
