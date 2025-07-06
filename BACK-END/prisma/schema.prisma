@@ -20,6 +20,7 @@ model User {
   age      String?
   role     Role       @default(USER)
   Provider Provider[]
+  senha 
 }
 
 model Provider {
@@ -30,7 +31,7 @@ model Provider {
   enterprise    String
   branch        String
   verified      Boolean @default(false)
-  branch        Branch
+  branch        Branch[]
   writtenEvents Event[] @relation("WrittenEvents")
 }
 
@@ -66,10 +67,4 @@ enum Branch {
   Trilhas
   Arte
   Compras
-}
-
-enum Status {
-  ANALYSYS
-  REVISION
-  ACCEPT
 }
