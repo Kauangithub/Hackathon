@@ -28,7 +28,7 @@ function App() {
           <Route path="tipo_conta" element={<TipoConta />} />
           <Route path="cadastro_usuario/1" element={<Cadastro_Usuario1 />} />
           <Route path="cadastro_usuario/2" element={<Cadastro_Usuario2 />} />
-          <Route path="cadastro_usuario/2" element={<Preferences />} />
+          <Route path="cadastro_usuario/3" element={<Preferences />} />
         </Route>
       </Routes>
     </BrowserRouter>
