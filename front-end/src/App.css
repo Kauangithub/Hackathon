@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+    --color1: #006C8A;
+    --color2: #D0E2E8;
+    --color3: #E7F0F3;
+    --color4: #A8BAC0;
+    --texto: #2e2e2e;
+    --texto-light: #4c4c4c;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.horizontal{
+    display: flex;
+    flex-direction: row;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.card-evento {
+    border: var(--color2) 2px solid;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    img {
+        width: 100px;
+        height: 150;
+    }
+
+    .conteudo-card {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .data {
+            font-weight: 700;
+            color: var(--color1);
+            fill: var(--color1);
+            align-items: center;
+            gap: 5px;
+        }
+
+        p {
+            font-size: 14px;
+            display: -webkit-box;
+            line-clamp: 3;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
 }
