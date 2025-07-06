@@ -61,9 +61,9 @@ function ReqProvider() {
                 id: req.params.id
             },
             data: {
-                email: req.body.email,
-                name: req.body.name,
-                age: req.body.age,
+                cpfCnpj: req.body.cpfCnpj,
+                enterprise: req.body.enterprise,
+                branch: req.body.branch,
             }
         }) 
 
