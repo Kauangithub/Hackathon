@@ -20,6 +20,7 @@ model User {
   age      String?
   role     Role       @default(USER)
   Provider Provider[]
+  senha 
 }
 
 model Provider {
@@ -28,8 +29,8 @@ model Provider {
   userId        String  @db.ObjectId
   cpfCnpj       String
   enterprise    String
-  branch        String
   verified      Boolean @default(false)
+  branch        Branch[]
   writtenEvents Event[] @relation("WrittenEvents")
 }
 
@@ -51,9 +52,18 @@ enum Role {
   PROVIDER
   ADMIN
 }
-
 enum Status {
   ANALYSYS
   REVISION
-  POSTED
+  ACCEPT
+}
+enum Branch {
+  Show
+  Culinaria
+  Cultura
+  Passeio
+  Lazer
+  Trilhas
+  Arte
+  Compras
 }
