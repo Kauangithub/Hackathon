@@ -64,6 +64,17 @@ function ReqEvent() {
     
         }
     )
+    app.delete('/eventos/:id', async (req,res) => {
+    
+            await prisma.event.delete({
+                where: {
+                    id: req.params.id
+                }
+            })
+    
+            res.status(201).json({ message: 'Evento deletado com sucesso'})
+        }
+    )
         
 
 }

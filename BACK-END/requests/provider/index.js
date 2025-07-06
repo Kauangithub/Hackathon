@@ -71,7 +71,7 @@ function ReqProvider() {
 
     })
 
-    app.delete('/prestadoes/:id', async (req,res) => {
+    app.delete('/prestadores/:id', async (req,res) => {
 
         await prisma.provider.delete({
             where: {
@@ -79,7 +79,7 @@ function ReqProvider() {
             }
         })
 
-        res.status(201).json({ message: 'Usuario deletado com sucesso'})
+        res.status(201).json({ message: 'Prestador deletado com sucesso'})
     })
 
 }
