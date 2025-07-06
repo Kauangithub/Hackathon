@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 
 import { ReqUser } from './requests/user/index.js';
+import { ReqProvider } from './requests/provider/index.js';
 import { ReqEvent } from './requests/event/index.js';
 
 const app = express();
@@ -17,6 +18,7 @@ app.listen(PORT, () =>
 );
 
 ReqUser();
+ReqProvider();
 ReqEvent();
 
 export {app};
