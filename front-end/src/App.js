@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import Cadastro_Evento from './pages/Cadastro_Evento';
 import Detalhe_Evento from './pages/Detalhe_Evento';
 import Conta from './pages/Conta';
+import TipoConta from './pages/TipoConta';
 
 /* Rotas */
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="cadastro_evento" element={<Cadastro_Evento />} />
           <Route path="detalhe_evento" element={<Detalhe_Evento />} />
           <Route path="perfil" element={<Conta />} />
+          <Route path="" element={<Conta />} />
         </Route>
       </Routes>
     </BrowserRouter>
