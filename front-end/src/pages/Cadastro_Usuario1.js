@@ -1,5 +1,5 @@
 function Cadastro_Usuario1() {
-   if (1 = 1) {
+   if (1 + 1 == 2) {
     return(
         <>
             <div>
