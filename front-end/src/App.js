@@ -19,6 +19,7 @@ function App() {
      <Routes>
        <Route path="/" element={<Layout />}>
          <Route index element={<Home />} />
+         <Route path="cadastro_evento" element={<Cadastro_Evento />} />
        </Route>
      </Routes>
    </BrowserRouter>
@@ -30,7 +31,7 @@ function App() {
          <Route path="perfil" element={<Perfil />} />
 */
 
-const Layout = () => {
+function Layout(){
   return(
     <>
       <div>
@@ -52,7 +53,7 @@ const Layout = () => {
   )
 }
 
-const Home = () => {
+function Home() {
   return(
     <>
       <header>
@@ -85,12 +86,9 @@ const Home = () => {
   )
 }
 
-const Cadastrar = () => {
-  return(
-    <h3>AAA</h3>
-  )
-}
+function Cadastro_Evento() {
 
+}
 /* Funções */
 
 function Card_Event() {
