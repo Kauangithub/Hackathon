@@ -33,10 +33,14 @@ function ReqProvider() {
 
         await prisma.provider.create({
             data: {
-                user : req.query.user,
-                cpfCnpj: req.query.cpfCnpj,
-                enterprise: req.query.enterprise,
-                branch: req.query.branch,
+                cpfCnpj: req.body.cpfCnpj,
+                enterprise: req.body.enterprise,
+                branch: req.body.branch,
+                user: {
+                    connect: {
+                        email: req.query.email
+                    }
+                },
             }
         }) 
 
