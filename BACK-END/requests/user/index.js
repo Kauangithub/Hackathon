@@ -12,7 +12,12 @@ function ReqUser() {
                 where: {
                     name: req.query.name,
                     email: req.query.email,
-                    age: req.query.age
+                    age: req.query.age,
+                    senha: req.query.senha,
+                    role: req.query.role,
+                    Provider: req.query.provider,
+
+
 
                 }
             })
