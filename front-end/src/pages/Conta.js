@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 import Logo from '../img/Logo.png';
 
 function Conta() {
     var organizador = 1
-    var explorador = 1
+    var explorador = 2
 
-    if (explorador = explorador) {
+    if (explorador == organizador) {
         return (
             <>
                  <div>
@@ -51,7 +53,7 @@ function Conta() {
             </>
         )
     }
-    if (organizador = organizador) {
+    if (organizador == explorador) {
         return(
             <>
             </>
@@ -64,8 +66,7 @@ function Conta() {
                     <h2>Você entrou como visitante</h2>
                     <p>Para acessar todas as funcionalidades, como receber recomendações personalizadas, salvar eventos favoritos ou cadastrar um evento, faça login ou crie uma conta.</p>
                     <button>Já tenho uma conta</button>
-                    <button>Criar uma conta</button>
-                    <button>Criar uma conta</button> 
+                    <Link to='/tipo_conta'><button>Criar uma conta</button> </Link>
                 </div>
             </>
         ) 

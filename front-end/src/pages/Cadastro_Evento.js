@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /* Componentes */
 import Imagens_Evento from '../components/Imagens_Evento'
 
