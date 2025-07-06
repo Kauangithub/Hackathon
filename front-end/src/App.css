@@ -7,6 +7,15 @@
     font-family: "Inter", sans-serif;
 }
 
+body{
+  padding: 24px;
+}
+#root{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 :root{
     --color1: #006C8A;
     --color2: #D0E2E8;
@@ -16,10 +25,62 @@
     --texto-light: #4c4c4c;
 }
 
+header{
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  .logo{
+    gap: 15px;
+    color: var(--color1);
+  }
+
+  img{
+    height: 40px;
+  }
+
+  .botoes{
+    gap: 10px;
+
+    .botao{
+      background-color: var(--color3);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.navbar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: var(--color1) 2px solid;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.navbar-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  color: var(--texto-light);
+
+  svg{
+    width: 30px;
+    height: 30px;
+  }
+}
+
 section{
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    gap: 15px;
 }
 
 .horizontal{
@@ -27,9 +88,12 @@ section{
     flex-direction: row;
 }
 
+.border{
+      border-radius: 15px;
+      border: var(--color2) 1px solid;
+}
+
 .card-evento {
-    border: var(--color2) 2px solid;
-    border-radius: 20px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.1) 0 5px 10px;
 
