@@ -30,6 +30,7 @@ model Provider {
   enterprise    String
   branch        String
   verified      Boolean @default(false)
+  branch        Branch
   writtenEvents Event[] @relation("WrittenEvents")
 }
 
@@ -50,6 +51,21 @@ enum Role {
   USER
   PROVIDER
   ADMIN
+}
+enum Status {
+  ANALYSYS
+  REVISION
+  ACCEPT
+}
+enum Branch {
+  Show
+  Culinaria
+  Cultura
+  Passeio
+  Lazer
+  Trilhas
+  Arte
+  Compras
 }
 
 enum Status {
