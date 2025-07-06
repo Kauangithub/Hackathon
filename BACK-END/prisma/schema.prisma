@@ -39,8 +39,7 @@ model Event {
   status    Status   @default(ANALYSYS)
   createdAt DateTime @default(now())
   title     String
-  local     String?
-
+  local     String
   desc      String
   dateStart DateTime
   dateEnd   DateTime
