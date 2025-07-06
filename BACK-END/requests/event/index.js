@@ -13,7 +13,6 @@ function ReqEvent() {
                 dateStart: req.body.dateStart,
                 dateEnd: req.body.dateEnd,
                 author: req.body.author,
-                // status tá accept para desenvolvimento
             }
         }) 
 

@@ -4,7 +4,7 @@ const prisma = new PrismaClient()
 
 import { app } from "../../index.js"
 function ReqProvider() {
-    app.get('/usuarios', async (req, res) => {
+    app.get('/prestadores', async (req, res) => {
         let providers = []
 
         if (req.query) {
@@ -29,13 +29,14 @@ function ReqProvider() {
         res.status(200).json(providers)
     })
 
-    app.post('/usuarios', async (req, res) => {
+    app.post('/prestadores', async (req, res) => {
 
         await prisma.provider.create({
             data: {
-                email: req.body.email,
-                name: req.body.name,
-                age: req.body.age,
+                user : req.query.user,
+                cpfCnpj: req.query.cpfCnpj,
+                enterprise: req.query.enterprise,
+                branch: req.query.branch,
             }
         }) 
 
@@ -43,7 +44,7 @@ function ReqProvider() {
 
     })
 
-    app.put('/usuarios/:id', async (req, res) => {
+    app.put('/prestadores/:id', async (req, res) => {
 
         await prisma.provider.update({
             where: {
@@ -60,7 +61,7 @@ function ReqProvider() {
 
     })
 
-    app.delete('/usuarios/:id', async (req,res) => {
+    app.delete('/prestadoes/:id', async (req,res) => {
 
         await prisma.provider.delete({
             where: {
