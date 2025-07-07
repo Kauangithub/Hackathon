@@ -207,6 +207,11 @@ section{
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+            color: var(--texto-light);
+        }
+
+        h3{
+          color: var(--texto);
         }
     }
 }
