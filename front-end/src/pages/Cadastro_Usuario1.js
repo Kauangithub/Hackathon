@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 
+import {TipoConta} from "./TipoConta";
+import { useContext } from "react";
+
 function Cadastro_Usuario1() {
-   if (1 + 1 == 2) {
+    const [ tipoConta, setTipoConta] = useContext(TipoConta)
+   if (tipoConta = "Organizador") {
     return(
         <>
             <div>
