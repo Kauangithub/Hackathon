@@ -17,7 +17,7 @@ export function MainContextProvider({ children }) {
         try {
             const response = await fetch(`${BASE_URL}/eventos`);
             if (!response.ok) {
-                throw new Error('Erro fetchin eventos');
+                throw new Error('Erro fetching eventos');
             }
             const data = await response.json();
             setEventos(data.eventos);
