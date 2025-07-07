@@ -3,7 +3,7 @@ import { MainContext } from "../context/maincontext";
 
 const Card_Event = () => {
 
-
+  fetchEventos()
   return (
     <div>
       <Link to='/detalhe_evento'>
@@ -42,7 +42,8 @@ const Card_Event = () => {
                 const card = document.createElement('div');
                 card.className = 'card-evento horizontal border';
                 card.innerHTML = `
-                    <Link to='/detalhe_evento/${evento.id}'>
+                    <a href="/detalhe_evento/${evento.id}">
+                    <div>
                       <img src="${evento.imagem}" alt="${evento.title}">
                       <div class="conteudo-card">
                           <div class="data horizontal">
@@ -50,8 +51,8 @@ const Card_Event = () => {
                           </div>
                           <h3>${evento.title}</h3>
                           <p>${evento.desc}</p>
-                      </div>
-                    </Link>
+                      </div></div>
+                    </a>
                 `;
                 cardsContainer.appendChild(card);
             }
@@ -61,5 +62,4 @@ const Card_Event = () => {
         }
     }
 ;
-fetchEventos()
 export default Card_Event
