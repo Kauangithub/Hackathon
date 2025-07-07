@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Cadastro_Usuario2() {
    if (1 + 1 == 2) {
     return(
@@ -15,7 +17,9 @@ function Cadastro_Usuario2() {
                     <input type='text' placeholder='Confirme a senha'></input>
                     <img></img>
                 </div>
-                <button type='submit' className='border horizontal'><p>Continuar</p></button>
+                <Link to='/cadastro_usuario/3'>
+                    <button type='submit' className='border horizontal'><p>Continuar</p></button>
+                </Link>
                 <div>
                     
                 </div>
