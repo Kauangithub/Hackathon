@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-import {TipoConta} from "./TipoConta";
 import { useContext } from "react";
+import { MainContext } from "../context/maincontext";
 
 function Cadastro_Usuario1() {
-    const [ tipoConta, setTipoConta] = useContext(TipoConta)
-   if (tipoConta = "Organizador") {
+    const [tipoConta] = useContext(MainContext);
+   if (tipoConta === "Organizador") {
     return(
         <>
             <div>

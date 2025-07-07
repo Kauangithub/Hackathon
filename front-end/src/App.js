@@ -15,23 +15,27 @@ import TipoConta from './pages/TipoConta';
 import Cadastro_Usuario1 from './pages/Cadastro_Usuario1';
 import Cadastro_Usuario2 from './pages/Cadastro_Usuario2';
 import Preferences from './pages/Preferences';
+import { MainContextProvider } from './context/maincontext';
+
 
 /* Rotas */
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="cadastro_evento" element={<Cadastro_Evento />} />
-          <Route path="detalhe_evento" element={<Detalhe_Evento />} />
-          <Route path="perfil" element={<Conta />} />
-          <Route path="tipo_conta" element={<TipoConta />} />
-          <Route path="cadastro_usuario/1" element={<Cadastro_Usuario1 />} />
-          <Route path="cadastro_usuario/2" element={<Cadastro_Usuario2 />} />
-          <Route path="cadastro_usuario/3" element={<Preferences />} />
-        </Route>
-      </Routes>
+      <MainContextProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="cadastro_evento" element={<Cadastro_Evento />} />
+            <Route path="detalhe_evento" element={<Detalhe_Evento />} />
+            <Route path="perfil" element={<Conta />} />
+            <Route path="tipo_conta" element={<TipoConta />} />
+            <Route path="cadastro_usuario/1" element={<Cadastro_Usuario1 />} />
+            <Route path="cadastro_usuario/2" element={<Cadastro_Usuario2 />} />
+            <Route path="cadastro_usuario/3" element={<Preferences />} />
+          </Route>
+        </Routes>
+      </MainContextProvider>
     </BrowserRouter>
   );
 }

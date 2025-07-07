@@ -1,17 +1,14 @@
+import { useContext  } from "react";
 import { Link } from "react-router-dom";
 
 
+import { MainContext } from "../context/maincontext";
 
 function TipoConta() {
-    const [ tipoConta, setTipoConta ] = useContext('')
+    const [tipoConta, setTipoConta] = useContext(MainContext);
 
-    handleClick = async () => {
-        tipoConta = "Organizador"
-    }
-
-    handleClick1 = async () => {
-        tipoConta = "Explorador"
-    }
+  const handleClick = () => setTipoConta("Explorador");
+  const handleClick1 = () => setTipoConta("Organizador");
 
     return (
         <>
@@ -31,6 +28,7 @@ function TipoConta() {
                    </div>
                </Link>
             </div>
+            <p>´${setTipoConta}´</p>
         </>
     )
 }

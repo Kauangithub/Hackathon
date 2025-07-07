@@ -1,36 +1,16 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
 
-
-BASE_URL = 'http://localhost:3000/'
-
 function Cadastro_Usuario2() {
+    const BASE_URL = 'http://localhost:3000/'
+
     const [ senha, setSenha ] = useState('')
     const [ senha2, setSenha2] = useState('')
 
-    const postLogin = async (loginInfo) => {
-        const response = await fetch(`${BASE_URL}/usuarios`, {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json',
-            },
-            body: JSON.stringify(loginInfo)
-        });
-        if (!response.ok) {
-            throw new Error('Error posting login');
-        }
-        const data = await response.json();
-        console.log(data);
-        setCustomer(data);
-        setIsAdmin(data.is_admin);
-        return data;
-    }
-
+    
     const handleLogin = async () => {
         if (senha == senha2) {
-            console.log('usuario validado')
-            postLogin();
-         
+            console.log('usuario validado')         
         } else {
 
         }
