@@ -12,6 +12,7 @@ function ReqEvent() {
                 desc: req.body.desc,
                 dateStart: req.body.dateStart,
                 dateEnd: req.body.dateEnd,
+                local: req.body.local,
                 author: {
                     connect: {
                         id: req.query.id
@@ -34,6 +35,16 @@ function ReqEvent() {
                         title: req.query.title,
                         dateStart: req.query.dateStart,
                         dateEnd: req.query.dateEnd,
+                        authorId: req.query.authorId,
+                        published: req.query.published,
+                        author: {
+                            user:{
+                                name: req.query.name,
+                            },
+                            verified : req.query.verified,
+                            enterprise : req.query.enterprise,
+                            branch : req.query.branch,
+                        }
                     }
                 })
             } else {

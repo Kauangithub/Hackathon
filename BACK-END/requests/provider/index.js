@@ -10,13 +10,9 @@ function ReqProvider() {
         if (req.query) {
             providers = await prisma.provider.findMany({
                 where: {
-                    name: req.query.name,
-                    email: req.query.email,
-                    age: req.query.age,
-                    senha: req.query.senha,
-                    role: req.query.role,
-                    Provider: req.query.provider,
                     cpfCnpj: req.query.cpfCnpj,
+                    userId: req.query.userId,
+                    id: req.query.id,
                     enterprise: req.query.enterprise,
                     branch: req.query.branch,
                     writtenEvents: req.query.events,
