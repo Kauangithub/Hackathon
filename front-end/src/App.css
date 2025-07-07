@@ -1,57 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
-body{
+body {
   padding: 24px;
   margin-bottom: 85px;
+  height: 100vh;
 }
-#root{
+
+#root {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  height: 100%;
 }
 
-:root{
-    --color1: #006C8A;
-    --color2: #D0E2E8;
-    --color3: #E7F0F3;
-    --color4: #A8BAC0;
-    --texto: #2e2e2e;
-    --texto-light: #929292;
+:root {
+  --color1: #006C8A;
+  --color2: #D0E2E8;
+  --color3: #E7F0F3;
+  --color4: #A8BAC0;
+  --texto: #2e2e2e;
+  --texto-light: #929292;
 }
 
-header{
+header {
   align-items: center;
   width: 100%;
   justify-content: space-between;
 
-  .logo{
+  .logo {
     gap: 15px;
     color: var(--color1);
   }
 
-  img{
+  img {
     height: 40px;
   }
 
-  
+
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.botoes{
+.botoes {
   gap: 10px;
 }
 
-.botao{
+.botao {
   background-color: var(--color3);
   min-width: 50px;
   height: 50px;
@@ -60,14 +63,14 @@ a{
   justify-content: center;
 }
 
-h5{
+h5 {
   color: var(--color1);
   font-weight: 800;
   font-size: 16px;
 }
 
 
-button{
+button {
   align-items: center;
   justify-content: center;
   background-color: var(--color1);
@@ -80,11 +83,11 @@ button{
   min-height: 50px;
 }
 
-hr{
+hr {
   border: var(--color2) 1px solid;
 }
 
-.navbar{
+.navbar {
   position: fixed;
   z-index: 10;
   bottom: 0;
@@ -96,7 +99,7 @@ hr{
   padding: 15px;
 }
 
-.navbar-item{
+.navbar-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,111 +107,116 @@ hr{
   font-weight: 500;
   color: var(--texto-light);
 
-  svg{
+  svg {
     width: 30px;
     height: 30px;
   }
 }
 
-section{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.horizontal{
-    display: flex;
-    flex-direction: row;
+.horizontal {
+  display: flex;
+  flex-direction: row;
 }
 
-.title{
+.title {
   gap: 10px;
   align-items: center;
 
-  svg{
+  svg {
     border: var(--color1);
   }
 }
 
 
-.justify{
+.justify {
   justify-content: space-between;
   align-items: center;
 }
 
-.border{
-    border-radius: 15px;
-    border: var(--color2) 1px solid;
+.border {
+  border-radius: 15px;
+  border: var(--color2) 1px solid;
 }
 
-.bloco{
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
+.bloco {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: var(--color3);
+  border-radius: 15px;
+  border: var(--color2) 1px solid;
+  gap: 15px;
+
+  .title {
+    gap: 10px;
+    align-items: center;
+  }
+
+  input {
     background-color: var(--color3);
-    border-radius: 15px;
-    border: var(--color2) 1px solid;
-    gap: 15px;
+    border: 0;
+    border-bottom: var(--color4) 2px solid;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
 
-    .title{
-      gap: 10px;
-      align-items: center;
-    }
+  input::placeholder {
+    color: var(--texto-light);
+  }
 
-    input{
-      background-color: var(--color3);
-      border: 0;
-      border-bottom: var(--color4) 2px solid;
-      width: 100%;
-      padding: 10px 0;
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    input::placeholder{
-      color: var(--texto-light);
-    }
-
-    .data{
-      width: 50%;
-      align-items: center;
-      gap: 10px;
-    }
+  .data {
+    width: 50%;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .card-evento {
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 5px 10px;
 
-    img {
-        width: 100px;
-        height: 150;
+  img {
+    width: 100px;
+    height: 150;
+  }
+
+  .conteudo-card {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .data {
+      font-weight: 700;
+      color: var(--color1);
+      fill: var(--color1);
+      align-items: center;
+      gap: 5px;
     }
 
-    .conteudo-card {
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-
-        .data {
-            font-weight: 700;
-            color: var(--color1);
-            fill: var(--color1);
-            align-items: center;
-            gap: 5px;
-        }
-
-        p {
-            font-size: 14px;
-            display: -webkit-box;
-            line-clamp: 3;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+    p {
+      font-size: 14px;
+      display: -webkit-box;
+      line-clamp: 3;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--texto-light);
     }
+
+    h3 {
+      color: var(--texto);
+    }
+  }
 }
 
 .switch {
@@ -250,15 +258,15 @@ section{
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: var(--color1);
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(20px);
   -ms-transform: translateX(20px);
   transform: translateX(20px);
@@ -272,31 +280,49 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.ImgEvento{
+.ImgEvento {
   width: 100%;
   height: 250px;
   border-radius: 15px;
 }
 
-.data-destaque{
+.data-destaque {
   background-color: var(--color1);
   color: #FFF;
   padding: 5px 10px;
   border-radius: 20px;
 }
 
-iframe{
+iframe {
   width: 100%;
 }
 
-#organizador{
-  button{
-    width: 100%;
-    border-radius: 15px !important;
-  }
+#organizador {
 
-  .botao{
+  .botao {
     background-color: var(--color2);
   }
 
+}
+
+button {
+  width: 100%;
+  border-radius: 15px !important;
+  border: 0;
+}
+
+.bottom{
+  height: 100%;
+  justify-content: end;
+  margin-bottom: 200px;
+}
+
+.bloco{
+  h4{
+    color: var(--color1);
+  }
+
+  p{
+    color: var(--texto);
+  }
 }
