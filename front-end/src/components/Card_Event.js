@@ -28,7 +28,7 @@ const Card_Event = () => {
   async function fetchEventos() {
         try {
           
-            const response = await fetch('http://localhost:3000/eventos');
+            const response = await fetch('http://localhost:3333/eventos');
             const eventos = await response.json();
             console.log(eventos);   
             const cardsContainer = document.getElementById('cards-container');
