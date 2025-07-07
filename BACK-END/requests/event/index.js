@@ -12,6 +12,7 @@ function ReqEvent() {
                 desc: req.body.desc,
                 dateStart: req.body.dateStart,
                 dateEnd: req.body.dateEnd,
+                local: req.body.local,
                 author: {
                     connect: {
                         id: req.query.id
