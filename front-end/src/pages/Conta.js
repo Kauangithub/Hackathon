@@ -62,12 +62,12 @@ function Conta() {
     else {
         return (
             <>
-                <div>
+                <section className="bottom">
                     <h2>Você entrou como visitante</h2>
                     <p>Para acessar todas as funcionalidades, como receber recomendações personalizadas, salvar eventos favoritos ou cadastrar um evento, faça login ou crie uma conta.</p>
-                    <button>Já tenho uma conta</button>
+                    <button className="horizontal">Já tenho uma conta</button>
                     <Link to='/tipo_conta'><button>Criar uma conta</button> </Link>
-                </div>
+                </section>
             </>
         ) 
     } 
