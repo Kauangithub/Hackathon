@@ -61,7 +61,7 @@ function ReqEvent() {
     )
     app.put('/eventos/:id', async (req, res) => {
     
-            await prisma.user.update({
+            await prisma.event.update({
                 where: {
                     id: req.params.id
                 },
