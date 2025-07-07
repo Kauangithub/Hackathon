@@ -35,6 +35,7 @@ function ReqUser() {
                 email: req.body.email,
                 name: req.body.name,
                 age: req.body.age,
+                senha: req.body.senha
             }
         }) 
 

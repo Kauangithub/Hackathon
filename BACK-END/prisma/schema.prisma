@@ -20,7 +20,7 @@ model User {
   age      String?
   role     Role      @default(USER)
   Provider Provider?
-  senha    String?
+  senha    String
 }
 
 model Provider {
@@ -44,7 +44,7 @@ model Event {
   dateStart DateTime
   dateEnd   DateTime
   published Boolean  @default(false)
-  author    Provider @relation("WrittenEvents", fields: [authorId], references: [id], onDelete : Cascade)
+  author    Provider @relation("WrittenEvents", fields: [authorId], references: [id], onDelete: Cascade)
   authorId  String   @db.ObjectId
 }
 
