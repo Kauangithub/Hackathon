@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MainContext } from "../context/maincontext";
 
-const Card_Event = ({ title, local, desc, dateStart, dateEnd, published, author }) => {
+const Card_Event = () => {
 
 
   return (
