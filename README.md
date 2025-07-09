@@ -24,7 +24,7 @@ Criar um calendário digital colaborativo e confiável, onde entidades credencia
 
 A equipe **Obelisco da Torneira** propôs uma plataforma que:
 
-- Permite que entidades públicas, culturais ou educacionais publiquem eventos de forma padronizada;
+- Permite a publicação eventos de forma padronizada;
 - Oferece um canal centralizado para consulta dos eventos;
 - Personaliza as recomendações de eventos com base nas preferências do usuário;
 - Valoriza a experiência tanto de moradores quanto de turistas.
