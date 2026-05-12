@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/RafaelRibeiro398/Hackathon/main/jury/Hackathon.zip" alt="Banner do Projeto" />
+  <img src="Telas.png" alt="Banner do Projeto" />
 </p>
 
 <h1 align="center">Hackathon 2025 - Obelisco da Torneira</h1>
